@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UsY-Pd-gcw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JunCodeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aes-Ub-Xc0">
+                                <rect key="frame" x="149" y="128" width="77" height="30"/>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <action selector="generateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="toU-Lu-pA8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQS-mg-yrc">
+                                <rect key="frame" x="149" y="208" width="77" height="30"/>
+                                <state key="normal" title="识别二维码"/>
+                                <connections>
+                                    <action selector="recognitionACtion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECk-9g-iEf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIj-zO-Ayj">
+                                <rect key="frame" x="149" y="288" width="77" height="30"/>
+                                <state key="normal" title="扫描二维码"/>
+                                <connections>
+                                    <action selector="scaningAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BZv-Ky-7b8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RQS-mg-yrc" firstAttribute="top" secondItem="Aes-Ub-Xc0" secondAttribute="bottom" constant="50" id="6zN-17-nSH"/>
+                            <constraint firstItem="RQS-mg-yrc" firstAttribute="centerX" secondItem="Aes-Ub-Xc0" secondAttribute="centerX" id="BVX-E5-uAy"/>
+                            <constraint firstItem="Aes-Ub-Xc0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D6B-j6-bhN"/>
+                            <constraint firstItem="Aes-Ub-Xc0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="YdI-nc-sd3"/>
+                            <constraint firstItem="aIj-zO-Ayj" firstAttribute="centerX" secondItem="RQS-mg-yrc" secondAttribute="centerX" id="mYK-pc-lbL"/>
+                            <constraint firstItem="aIj-zO-Ayj" firstAttribute="top" secondItem="RQS-mg-yrc" secondAttribute="bottom" constant="50" id="tj6-cW-Bpb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pPB-qD-Amt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.19999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hbr-eF-sne">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UsY-Pd-gcw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tX6-rg-BWd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iY7-zH-o0t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcz-Jp-WV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194" y="107"/>
+        </scene>
+    </scenes>
+</document>

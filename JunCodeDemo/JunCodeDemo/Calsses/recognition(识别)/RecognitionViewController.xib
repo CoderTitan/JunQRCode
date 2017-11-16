@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecognitionViewController" customModule="JunCodeDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="codeImageView" destination="fwa-13-Y3U" id="oKo-J2-BEP"/>
+                <outlet property="codeInfoLabel" destination="3gl-Vr-WTz" id="i07-nO-jQw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_picture" translatesAutoresizingMaskIntoConstraints="NO" id="fwa-13-Y3U">
+                    <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fwa-13-Y3U" secondAttribute="height" multiplier="1:1" id="d35-op-NUs"/>
+                        <constraint firstAttribute="width" constant="240" id="y18-Ne-sfO"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQX-TN-cyG">
+                    <rect key="frame" x="185" y="139" width="123" height="30"/>
+                    <state key="normal" title="从相册选择二维码"/>
+                    <connections>
+                        <action selector="selectivePictudeAction:" destination="-1" eventType="touchUpInside" id="Mu7-mg-pxb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGT-6F-6Xz">
+                    <rect key="frame" x="67.5" y="139" width="108" height="30"/>
+                    <state key="normal" title="相机拍摄二维码"/>
+                    <connections>
+                        <action selector="selectivePictudeAction:" destination="-1" eventType="touchUpInside" id="4hs-iy-gyQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2q0-4N-sco">
+                    <rect key="frame" x="133" y="483.5" width="108" height="30"/>
+                    <state key="normal" title="识别二维码信息"/>
+                    <connections>
+                        <action selector="recognitionCodeAction:" destination="-1" eventType="touchUpInside" id="aAr-jZ-0bC"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="二维码信息展示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gl-Vr-WTz">
+                    <rect key="frame" x="0.0" y="40" width="375" height="30"/>
+                    <color key="backgroundColor" red="0.8959133292" green="0.8959133292" blue="0.8959133292" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Shc-k2-Syt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3gl-Vr-WTz" secondAttribute="trailing" id="2X1-a5-8w7"/>
+                <constraint firstItem="fwa-13-Y3U" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="7Xn-tt-exs"/>
+                <constraint firstItem="fwa-13-Y3U" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Amk-1C-4lv"/>
+                <constraint firstItem="3gl-Vr-WTz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FTG-eb-TVa"/>
+                <constraint firstItem="2q0-4N-sco" firstAttribute="top" secondItem="fwa-13-Y3U" secondAttribute="bottom" constant="30" id="GHx-v7-Ndo"/>
+                <constraint firstItem="XQX-TN-cyG" firstAttribute="trailing" secondItem="fwa-13-Y3U" secondAttribute="trailing" id="OXO-83-2j6"/>
+                <constraint firstItem="fwa-13-Y3U" firstAttribute="top" secondItem="wGT-6F-6Xz" secondAttribute="bottom" constant="44.5" id="Qe0-cf-ZoC"/>
+                <constraint firstItem="wGT-6F-6Xz" firstAttribute="leading" secondItem="fwa-13-Y3U" secondAttribute="leading" id="d8z-w8-fej"/>
+                <constraint firstItem="3gl-Vr-WTz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oWm-fi-FUl"/>
+                <constraint firstItem="XQX-TN-cyG" firstAttribute="centerY" secondItem="wGT-6F-6Xz" secondAttribute="centerY" id="vmV-nm-ANR"/>
+                <constraint firstItem="3gl-Vr-WTz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="wAU-dK-hvu"/>
+                <constraint firstItem="2q0-4N-sco" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zXt-ny-4cP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty_picture" width="100" height="100"/>
+    </resources>
+</document>
